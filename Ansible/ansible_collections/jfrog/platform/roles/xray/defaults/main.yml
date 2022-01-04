@@ -105,3 +105,9 @@ xray_systemyaml: |-
 
 # Note: xray_systemyaml_override is by default false,  if you want to change default xray_systemyaml
 xray_systemyaml_override: false
+
+# Location of CentOs GPG public key
+rpm_key_centos: https://www.centos.org/keys/RPM-GPG-KEY-CentOS-Official
+
+# Location of RabbitMQ release signing key
+rpm_key_rabbitmq: https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc

@@ -147,6 +147,13 @@
     - xray_systemyaml_override or (not systemyaml.stat.exists)
   notify: restart xray
 
+- name: Run restore context to reload selinux
+  become: yes
+  shell: |
+    restorecon -R -v "{{ xray_home }}/app/bin"
+  when: ansible_distribution == 'RedHat'
+  changed_when: false
+
 - name: Ensure permissions are correct
   become: yes
   file:

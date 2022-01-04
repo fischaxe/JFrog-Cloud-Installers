@@ -3,3 +3,11 @@
   yum:
     name: expect
     state: present
+
+- name: Configure SELinux context
+  become: yes
+  sefcontext:
+    target: "{{ xray_home }}/app/bin(/.*)?"
+    setype: bin_t
+    state: present
+  when: ansible_selinux.status == 'enabled'

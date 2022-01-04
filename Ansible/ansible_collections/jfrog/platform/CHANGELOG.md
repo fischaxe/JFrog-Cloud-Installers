@@ -1,6 +1,10 @@
 # JFrog Platform Ansible Collection Changelog
 All changes to this collection will be documented in this file.
 
+## [10.1.3] - Jan 10, 2022
+* Introduced OS family specific default variables and extracted hardcoded signing key links for RedHat
+* Added XRAY SELinux support for RHEL systems 
+
 ## [10.1.2] - Dec 23, 2021
 * Product Updates/fixes
 
